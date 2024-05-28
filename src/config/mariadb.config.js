@@ -1,0 +1,13 @@
+require('dotenv').config()
+module.exports={
+    DBNAME:process.env['DBNAME'],
+    DBPASSWORD:process.env['DBPASSWORD'],
+    DBDIALECT:process.env['DIALECT'],
+    DBUSER:process.env['DBUSER'],
+    DBHOST:process.env['DBHOST'],
+    pool:{
+        max:Number(process.env['MAX']),
+        min:Number(process.env['MIN']),
+        idle:process.env['IDLE']
+    }
+}
